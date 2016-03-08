@@ -1,0 +1,26 @@
+{
+	"name": "node-red-contrib-alasql",
+	"version": "0.2.0-debug",
+	"description": "Node-RED wrapper for AlaSQL for fast SQL based in-memory data processing for BI and ERP applications.",
+	
+	"author": "Mathias Rangel Wulff <m@rawu.dk>",
+	"dependencies": {
+		"alasql": "0.2.*"
+	},
+	"repository": {
+		"type":"git",
+		"url":"https://github.com/mathiasrw/node-red-contrib-alasql"
+	},
+	"license": "MIT",
+	"keywords": [ 
+		"node-red",  
+		"sql",
+		"nosql",
+		"database"
+   ],
+	"node-red": {
+		"nodes": {
+			"alasql": "node-red-contrib-alasql.js"
+		}
+	}
+}
