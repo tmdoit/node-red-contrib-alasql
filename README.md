@@ -27,7 +27,7 @@ npm install node-red-node-sqlite
 
 Typically the returned payload will be an array of objects:  
 
-```json
+```js
 [{name:'foo', age: 86}, {name:'bar', age:64}]
 ```
 
