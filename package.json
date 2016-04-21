@@ -1,6 +1,6 @@
 {
 	"name": "node-red-contrib-alasql",
-	"version": "0.2.0-debug",
+	"version": "0.2.1-develop",
 	"description": "Node-RED wrapper for AlaSQL for fast SQL based in-memory data processing for BI and ERP applications.",
 	
 	"author": "Mathias Rangel Wulff <m@rawu.dk>",
