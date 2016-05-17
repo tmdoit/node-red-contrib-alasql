@@ -1,8 +1,6 @@
-**PLEASE NOTE THAT THE NODE FOR SOME REASON DOES NOT SHOW UP IN NODE-RED - im working on it...**
+# FOR SOME REASON THE NODE DOES NOT SHOW UP IN NODE-RED - im working on it... 
 
-----
-
-# node-red-contrib-alasql
+## node-red-contrib-alasql
 
 A Node-RED node wrapping [AlaSQL](https://github.com/agershun/alasql) for fast SQL based in-memory data processing for BI and ERP applications.
 
