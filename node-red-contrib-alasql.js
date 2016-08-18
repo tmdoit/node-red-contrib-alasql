@@ -2,18 +2,14 @@
 module.exports = function(RED) {
 	var alasql = require('alasql');
 
-
-	function AlasqlNodeIn(n) {
-		RED.nodes.createNode(this,n);
-
+	function AlasqlNodeIn(config) {
+		RED.nodes.createNode(this,config);
+        var node = this;
+        node.query = config.query;
 		node.on("input", function(msg) {
-			if(typeof msg.topic !== 'string'){
-				return node.error("msg.topic needs to be a SQL query string",msg);
-			}
-
-			var bind = Array.isArray(msg.payload) ? msg.payload : [msg.payload];
-
-			alasql.promise(msg.topic, bind)
+			var sql = this.query||'=undefined';
+			var bind = Array.isArray(msg.payload) ? [msg.payload] : [[msg.payload]];
+			alasql.promise(sql, bind)
 				.then(function(res){
 					msg.payload = res;
 					node.send(msg);
