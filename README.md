@@ -1,4 +1,6 @@
-# FOR SOME REASON THE NODE DOES NOT SHOW UP IN NODE-RED - im working on it... 
+# FOR SOME REASON THE NODE DOES NOT SHOW UP IN NODE-RED - we are working on it... 
+
+Authors: Mathias Mattias Wolf, Andrey Gershun
 
 ## node-red-contrib-alasql
 
@@ -10,18 +12,18 @@ Especially useful when you have (many) different sources coming with data you wa
 
 ## Install
 
-Go to your Node-RED user directory and install `node-red-node-sqlite`. Typically like:
+Go to your Node-RED user directory and install `node-red-node-alasql`. Typically like:
 
 ```bash
 cd ~/.node-red
-npm install node-red-node-sqlite
+npm install node-red-node-alasql
 ```
 
 
 
 ## How to use
 
-* `msg.topic` must hold a valid SQL query
+* `SQL query` parameter must hold a valid SQL query
 
 * The result will be returned in `msg.payload`
 
@@ -38,7 +40,7 @@ To manipulate output format please consult the use of [`VALUE OF`](https://githu
 
 #### Multiply queries
 
-The `msg.topic` can hold several SQL queries separated by `;`. The returned value will be an array with the result from each typically returned payload.
+The `SQL query` can hold several SQL queries separated by `;`. The returned value will be an array with the result from each typically returned payload.
 
 
 #### Binding parameters
