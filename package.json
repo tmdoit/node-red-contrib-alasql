@@ -13,7 +13,7 @@
 	},
 	"license": "MIT",
 	"keywords": [ 
-		"node-red-still-developing",  
+		"node-red",  
 		"sql",
 		"nosql",
 		"database"
