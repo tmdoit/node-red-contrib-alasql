@@ -7,7 +7,7 @@ module.exports = function(RED) {
         var node = this;
         node.query = config.query;
 		node.on("input", function(msg) {
-			var sql = this.query||'=undefined';
+			var sql = this.query||'SELECT * FROM ?';
 			var bind = Array.isArray(msg.payload) ? [msg.payload] : [[msg.payload]];
 			alasql.promise(sql, bind)
 				.then(function(res){

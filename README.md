@@ -1,27 +1,28 @@
-# FOR SOME REASON THE NODE DOES NOT SHOW UP IN NODE-RED - im working on it... 
+# ALASQL and ALA-FILE NODE-RED NODES
+
+(c) 2016 Mathias Mattias Wolf, Andrey Gershun
 
 ## node-red-contrib-alasql
 
-A Node-RED node wrapping [AlaSQL](https://github.com/agershun/alasql) for fast SQL based in-memory data processing for BI and ERP applications.
+This package consists of two components for Node-RED wrapping [AlaSQL](https://github.com/agershun/alasql) for fast SQL based in-memory data processing for BI and ERP applications and import-export files into XLSX, XLS, and other data formats.
 
 Especially useful when you have (many) different sources coming with data you want to join, filter and format.
 
 
-
 ## Install
 
-Go to your Node-RED user directory and install `node-red-node-sqlite`. Typically like:
+Go to your Node-RED user directory and install `node-red-node-alasql`. Typically like:
 
 ```bash
 cd ~/.node-red
-npm install node-red-node-sqlite
+npm install node-red-node-alasql
 ```
 
 
 
-## How to use
+## How to use ALASQL node
 
-* `msg.topic` must hold a valid SQL query
+* `SQL query` parameter must hold a valid SQL query
 
 * The result will be returned in `msg.payload`
 
@@ -38,7 +39,7 @@ To manipulate output format please consult the use of [`VALUE OF`](https://githu
 
 #### Multiply queries
 
-The `msg.topic` can hold several SQL queries separated by `;`. The returned value will be an array with the result from each typically returned payload.
+The `SQL query` can hold several SQL queries separated by `;`. The returned value will be an array with the result from each typically returned payload.
 
 
 #### Binding parameters
@@ -57,8 +58,15 @@ This includes `INSERT`, `UPDATE`, `DELETE`, `VIEW` indexes and multiple levels o
 Please [consult the AlaSQL wiki](https://github.com/agershun/alasql/wiki/readme) to undertand the flexible nature of the library. 
 
 
+## Ala-file - Import and Export files
 
+You also can use `ala-file` component to perform import and export operations with files. The parameters include:
 
+* `Name` - the name of the node
+* `File name` - path to import or export file
+* `Format` - select file format 
+* `Colums` - specify `*` (star) for all columns or list them with comma like `one, two, three`. You also can use AlaSQL functions or even rename columns with `AS` operator (see the AlaSQL `SELECT` statement documentation)
+* `Headers` - include first line headers
 
 ## Please note
 
