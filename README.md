@@ -11,7 +11,7 @@ Especially useful when you have (many) different sources coming with data you wa
 
 ## Install
 
-Go to your Node-RED user directory and install `node-red-node-alasql`. Typically like:
+Go to your Node-RED user directory and install `node-red-contrib-alasql` from npm:
 
 ```bash
 cd ~/.node-red
