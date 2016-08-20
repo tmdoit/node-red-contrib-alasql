@@ -1,4 +1,4 @@
-# ALASQL and ALA-FILE NODE-RED NODES
+# AlaSQL and Ala-file node-red nodes
 
 (c) 2016 Mathias Rangel Wulff & Andrey Gershun
 
