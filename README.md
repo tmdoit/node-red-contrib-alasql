@@ -1,6 +1,6 @@
 # ALASQL and ALA-FILE NODE-RED NODES
 
-(c) 2016 Mathias Mattias Wolf, Andrey Gershun
+(c) 2016 Mathias Rangel Wulff & Andrey Gershun
 
 ## node-red-contrib-alasql
 
@@ -15,20 +15,22 @@ Go to your Node-RED user directory and install `node-red-node-alasql`. Typically
 
 ```bash
 cd ~/.node-red
-npm install node-red-node-alasql
+npm install node-red-contrib-alasql
 ```
 
 
 
 ## How to use ALASQL node
 
-* `SQL query` parameter must hold a valid SQL query
+1. Write a valid SQL query in the `SQL query` parameter. It can hold several SQL queries separated by `;`.
 
-* The result will be returned in `msg.payload`
+2. Refer to input data in `msg.payload` with `$0` in your SQL. If `msg.payload` is an array the first value will be `$0`, the second `$1` and so forth. 
+
+2. The result will be returned in `msg.payload`
 
 #### Returned values
 
-Typically the returned payload will be an array of objects:  
+Default return format is an array of objects:  
 
 ```js
 [{name:'foo', age: 86}, {name:'bar', age:64}]
@@ -36,16 +38,7 @@ Typically the returned payload will be an array of objects:
 
 To manipulate output format please consult the use of [`VALUE OF`](https://github.com/agershun/alasql/wiki/Value), [`MATRIX OF`](https://github.com/agershun/alasql/wiki/MATRIX), [`COLUMN OF`](https://github.com/agershun/alasql/wiki/COLUMN), [`ROW OF`](https://github.com/agershun/alasql/wiki/ROW), and [`RECORDSET OF`](https://github.com/agershun/alasql/wiki/RECORDSET).
 
-
-#### Multiply queries
-
-The `SQL query` can hold several SQL queries separated by `;`. The returned value will be an array with the result from each typically returned payload.
-
-
-#### Binding parameters
-
-The `msg.payload` will be passed as a binded parameter. You can refer to the value by having `$0` in your SQL. If `msg.payload` is an array the first value will be `$0`, the second `$1` and so forth. 
-
+If several queries are executed (seperated by `;`) the returned value will be an array with the result from each.
 
 
 
