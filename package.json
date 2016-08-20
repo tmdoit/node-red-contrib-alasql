@@ -1,11 +1,11 @@
 {
 	"name": "node-red-contrib-alasql",
 	"version": "0.2.2-develop",
-	"description": "Node-RED wrapper for AlaSQL for fast SQL based in-memory data processing for BI and ERP applications.",
+	"description": "Node-RED wrapper for AlaSQL database and XLSX import/export",
 	
 	"author": "Mathias Rangel Wulff <m@rawu.dk>, Andrey Gershun <agershun@gmail.com>",
 	"dependencies": {
-		"alasql": "0.2.*"
+		"alasql": "0.3.*"
 	},
 	"repository": {
 		"type":"git",
@@ -14,17 +14,20 @@
 	"license": "MIT",
 	"keywords": [ 
 		"node-red",  
+		"alasql",
 		"sql",
 		"nosql",
 		"database",
 		"excel",
 		"xls",
-		"xlsx"
+		"xlsx",
+		"csv",
+		"json"
    ],
 	"node-red": {
 		"nodes": {
 			"alasql": "node-red-contrib-alasql.js",
-			"alasql-excel": "node-red-contrib-alasql-excel.js"
+			"ala-file": "node-red-contrib-ala-file.js"
 		}
 	}
 }
