@@ -12,30 +12,30 @@
     <div class="form-row">
         <label for="node-input-format"><i class="fa fa-code"></i> Format</label>
         <select id="node-input-format" style="width:180px;">
-            <option value="xlsx">XLSX</option>
-            <option value="xls">XLS</option>
-            <option value="json">JSON</option>
-            <option value="txt">TXT</option>
-            <option value="csv">CSV</option>
-            <option value="tsv">TSV</option>
-            <option value="sql">SQL</option>
+            <option value="xlsx">.xlsx</option>
+            <option value="xls">.xls</option>
+            <option value="csv">.csv</option>
+            <option value="json">.json</option>
+            <option value="tsv">.tsv</option>
+            <option value="txt">.txt</option>
+            <option value="sql">.sql</option>
         </select>
     </div>
 
     <div class="form-row">
         <label for="node-input-columns"><i class="icon-tag"></i> Columns</label>
-        <input type="text" id="node-input-columns" placeholder="Select columns...">
+        <input type="text" id="node-input-columns" placeholder="Select columns to be stored. Use * to select all">
     </div>
 
     <div class="form-row">
-        <label for="node-input-headers"><i class="fa fa-list"></i> Headers</label>
+        <label for="node-input-headers"><i class="fa fa-list"></i> First row must contain column names</label>
         <input type="checkbox" id="node-input-headers" style="width:20px">
     </div>
 
 </script>
 
 <script type="text/x-red" data-help-name="ala-file out">
-    <p>Writes <code>msg.payload</code> to the specified file in XLSX, CSV, or other formats. The node uses <a href="https://github.com/agershun/alasql" target="_blank">AlaSQL</a> library.</p>
+    <p>Write <code>msg.payload</code> to a specified fileformat (<code>.xlsx</code>, <code>.xls</code>, <code>.csv</code>, <code>.json</code>, <code>.tsv</code>, <code>.txt</code> or <code>.sql</code>). The node uses <a href="https://github.com/agershun/alasql" target="_blank">AlaSQL</a> library.</p>
 </script>
 
 <script type="text/javascript">
@@ -53,8 +53,8 @@
         },
         icon: "alasql.png",
         label: function() {
-            console.log(this.format);
-            return this.name||this.format||"ala file";
+            //console.log(this.format);
+            return this.name||this.format||"Ala-file";
         },
         labelStyle: function() {
             return this.name?"node_label_italic":"";
@@ -67,34 +67,35 @@
 
 <script type="text/x-red" data-template-name="ala-file">
     <div class="form-row">
-        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <label for="node-input-name"><i class="icon-tag"></i> Name of node</label>
         <input type="text" id="node-input-name" placeholder="Name">
     </div>
 
     <div class="form-row">
-        <label for="node-input-filename"><i class="icon-tag"></i> File name</label>
+        <label for="node-input-filename"><i class="icon-tag"></i> Name of exported file (without extension)</label>
         <input type="text" id="node-input-filename" placeholder="file name...">
     </div>
 
     <div class="form-row">
         <label for="node-input-format"><i class="fa fa-code"></i> Format</label>
         <select id="node-input-format" style="width:180px;">
-            <option value="xlsx">XLSX</option>
-            <option value="xls">XLS</option>
-            <option value="json">JSON</option>
-            <option value="txt">TXT</option>
-            <option value="csv">CSV</option>
-            <option value="tsv">TSV</option>
+            <option value="xlsx">.xlsx</option>
+            <option value="xls">.xls</option>
+            <option value="csv">.csv</option>
+            <option value="json">.json</option>
+            <option value="tsv">.tsv</option>
+            <option value="txt">.txt</option>
+            <option value="sql">.sql</option>
         </select>
     </div>
 
     <div class="form-row">
-        <label for="node-input-columns"><i class="icon-tag"></i> Columns</label>
-        <input type="text" id="node-input-columns" placeholder="Select columns...">
+        <label for="node-input-columns"><i class="icon-tag"></i> Columns </label>
+        <input type="text" id="node-input-columns" placeholder="Select columns to be stored. Use * to select all">
     </div>
 
     <div class="form-row">
-        <label for="node-input-headers"><i class="fa fa-list"></i> Headers</label>
+        <label for="node-input-headers"><i class="fa fa-list"></i> First row must contain column names</label>
         <input type="checkbox" id="node-input-headers" style="width:20px">
     </div>
 

@@ -46,7 +46,7 @@ module.exports = function(RED) {
         node.headers = config.headers;
 		node.on("input", function(msg) {
 			var sql = 'SELECT '+this.columns
-					+' FROM '+this.format+'("'+doubleb(this.filename)
+					+' FROM '+this.format+'("'+doubleb(this.filename)+'.'+this.format
 					+'",{headers:'+this.headers+'})';
 			var bind = Array.isArray(msg.payload) ? [msg.payload] : [[msg.payload]];
 			alasql.promise(sql, bind)
