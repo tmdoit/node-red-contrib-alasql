@@ -1,4 +1,4 @@
-# AlaSQL and Ala-file node-red nodes
+# AlaSQL and AlaFile node-red nodes
 
 (c) 2016 Mathias Rangel Wulff & Andrey Gershun
 
@@ -20,7 +20,7 @@ npm install node-red-contrib-alasql
 
 
 
-## How to use ALASQL node
+## How to use an AlaSQL node
 
 1. Write a valid SQL query in the `SQL query` parameter. It can hold several SQL queries separated by `;`.
 
@@ -51,7 +51,7 @@ This includes `INSERT`, `UPDATE`, `DELETE`, `VIEW` indexes and multiple levels o
 Please [consult the AlaSQL wiki](https://github.com/agershun/alasql/wiki/readme) to undertand the flexible nature of the library. 
 
 
-## Ala-file - Import and Export files
+## AlaFile - Import and Export files
 
 You also can use `ala-file` component to perform import and export operations with files. The parameters include:
 
@@ -63,7 +63,7 @@ You also can use `ala-file` component to perform import and export operations wi
 
 ## Please note
 
-As default the library works in-memory - so all data are lost when Node-RED is restarted. Please consult [the wiki](https://github.com/agershun/alasql/wiki) to read more about how to let data be persistent.  
+As default the library works in-memory - so all unsaved data are reset when Node-RED closes. Please consult [the wiki](https://github.com/agershun/alasql/wiki) to read more about how to let data be persistent.  
 
 If you are not sure why this is funny - please find out more about "SQL injections"...
 
