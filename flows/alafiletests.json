@@ -1,13 +1,13 @@
 [
     {
-        "id": "a62b2385.ba7c8",
-        "type": "tab",
-        "label": "Sandbox"
-    },
-    {
         "id": "ac461d84.e7abc",
         "type": "tab",
         "label": "Alasql File In/Out"
+    },
+    {
+        "id": "a62b2385.ba7c8",
+        "type": "tab",
+        "label": "Sandbox"
     },
     {
         "id": "d772419e.8363c",
@@ -387,7 +387,8 @@
                 "3867363f.1189da",
                 "c7685a2f.8d6bb8",
                 "ee889cf.1cc2f6",
-                "b686bc6b.abb76"
+                "b686bc6b.abb76",
+                "2e39aa6e.f54fa6"
             ]
         ]
     },
@@ -453,7 +454,7 @@
         "columns": "*",
         "headers": true,
         "x": 670,
-        "y": 1300,
+        "y": 1360,
         "wires": []
     },
     {
@@ -466,7 +467,7 @@
         "columns": "*",
         "headers": true,
         "x": 670,
-        "y": 1360,
+        "y": 1420,
         "wires": []
     },
     {
@@ -1111,7 +1112,7 @@
         "name": "Test not implemented",
         "info": "Test for SQL output has not been implemented yet",
         "x": 520,
-        "y": 1360,
+        "y": 1420,
         "wires": []
     },
     {
@@ -1126,7 +1127,7 @@
         "crontab": "",
         "once": false,
         "x": 120,
-        "y": 1580,
+        "y": 1620,
         "wires": [
             [
                 "b1336c8c.cc807"
@@ -1142,11 +1143,15 @@
         "outputs": 1,
         "noerr": 0,
         "x": 140,
-        "y": 1660,
+        "y": 1700,
         "wires": [
             [
                 "9683d208.c494",
-                "2fbb1110.c55ade"
+                "3b2d6d2d.6e1912",
+                "788cbc80.2e0a54",
+                "e1d8ede.3fbbe1",
+                "126adc4d.29c084",
+                "416088f6.a614e8"
             ]
         ]
     },
@@ -1157,7 +1162,7 @@
         "name": "ala sql file in - input format tests",
         "info": "",
         "x": 170,
-        "y": 1440,
+        "y": 1480,
         "wires": []
     },
     {
@@ -1170,7 +1175,7 @@
         "columns": "*",
         "headers": true,
         "x": 350,
-        "y": 1500,
+        "y": 1540,
         "wires": [
             [
                 "783ad840.84d8d8"
@@ -1186,7 +1191,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 520,
-        "y": 1480,
+        "y": 1520,
         "wires": [
             []
         ]
@@ -1201,7 +1206,7 @@
         "columns": "*",
         "headers": true,
         "x": 350,
-        "y": 1580,
+        "y": 1620,
         "wires": [
             [
                 "e0d67eda.89c79"
@@ -1218,7 +1223,7 @@
         "columns": "*",
         "headers": true,
         "x": 350,
-        "y": 1660,
+        "y": 1700,
         "wires": [
             [
                 "3665c63f.4e1e4a"
@@ -1235,7 +1240,7 @@
         "columns": "*",
         "headers": true,
         "x": 350,
-        "y": 1740,
+        "y": 1780,
         "wires": [
             [
                 "6a5fb619.bdacc8"
@@ -1252,7 +1257,7 @@
         "columns": "*",
         "headers": true,
         "x": 350,
-        "y": 1820,
+        "y": 1860,
         "wires": [
             [
                 "89d572a1.70ec"
@@ -1265,11 +1270,11 @@
         "z": "ac461d84.e7abc",
         "name": "",
         "filename": "",
-        "format": "txt",
+        "format": "tsv",
         "columns": "*",
         "headers": true,
         "x": 350,
-        "y": 1900,
+        "y": 1940,
         "wires": [
             [
                 "a5e9be55.f989c"
@@ -1283,7 +1288,7 @@
         "name": "Read from files created above",
         "info": "",
         "x": 510,
-        "y": 1440,
+        "y": 1480,
         "wires": []
     },
     {
@@ -1295,7 +1300,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 520,
-        "y": 1560,
+        "y": 1600,
         "wires": [
             []
         ]
@@ -1309,7 +1314,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 520,
-        "y": 1640,
+        "y": 1680,
         "wires": [
             []
         ]
@@ -1323,7 +1328,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 520,
-        "y": 1720,
+        "y": 1760,
         "wires": [
             []
         ]
@@ -1337,7 +1342,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 520,
-        "y": 1800,
+        "y": 1840,
         "wires": [
             []
         ]
@@ -1351,7 +1356,51 @@
         "outputs": 1,
         "noerr": 0,
         "x": 520,
-        "y": 1880,
+        "y": 1920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2e39aa6e.f54fa6",
+        "type": "ala-file out",
+        "z": "ac461d84.e7abc",
+        "name": "",
+        "filename": "",
+        "format": "tsv",
+        "columns": "*",
+        "headers": true,
+        "x": 670,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "788cbc80.2e0a54",
+        "type": "ala-file in",
+        "z": "ac461d84.e7abc",
+        "name": "",
+        "filename": "",
+        "format": "txt",
+        "columns": "*",
+        "headers": true,
+        "x": 350,
+        "y": 2020,
+        "wires": [
+            [
+                "8088bfff.e6c15"
+            ]
+        ]
+    },
+    {
+        "id": "8088bfff.e6c15",
+        "type": "function",
+        "z": "ac461d84.e7abc",
+        "name": "Count Records",
+        "func": "node.status({});\nvar record_count = msg.payload.length;\nif (record_count > 0) {\n    node.status({fill:'green',shape:'dot',text:'Records: ' + record_count});\n}\nelse {\n    node.status({fill:'red',shape:'dot',text:'Records: ' + record_count});\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 520,
+        "y": 2000,
         "wires": [
             []
         ]
