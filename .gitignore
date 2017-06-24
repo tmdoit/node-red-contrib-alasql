@@ -2,5 +2,6 @@ node_modules/
 node_modules
 node_modules/*
 
-# Ignore node-red flow backups
+# Ignore node-red test directory and flow backups
+**/.flotsam
 flows/**/*.backup
