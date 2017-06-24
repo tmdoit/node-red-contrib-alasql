@@ -73,13 +73,20 @@ module.exports = function(RED) {
 						+' FROM '+this.format+'("'+doubleb(filename)+'.'+this.format
 						+'",{headers:'+this.headers+'})';
 				var bind = Array.isArray(msg.payload) ? [msg.payload] : [[msg.payload]];
-				alasql.promise(sql, bind)
-					.then(function(res){
-						msg.payload = res;
-						node.send(msg);
-					}).catch(function(err){
-						node.error(err,msg);
-					});
+				if (!require('fs').existsSync(doubleb(filename)+'.'+this.format)) {
+					var notExist = ' '+doubleb(filename)+'.'+this.format+" does not exist!";
+	                node.warn(RED._(notExist));
+					node.status({fill:"red",shape:"ring",text:notExist});
+				}
+				else {
+					alasql.promise(sql, bind)
+						.then(function(res){
+							msg.payload = res;
+							node.send(msg);
+						}).catch(function(err){
+							node.error(err,msg);
+						});
+				}
 			}
 		});
         this.on('close', function() {
