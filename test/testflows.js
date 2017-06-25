@@ -31,5 +31,7 @@ else {
 
 console.log('');
 console.log('To start node-red server for testing on Linux  : test/startup.sh');
-console.log('To start node-red server for testing on Windows: test\\startup.bat');
-
+console.log('To start node-red server for testing on Windows: npm link & test\\startup.bat & cd ..\\..\\..');
+console.log('');
+console.log('For windows - to stop node-red server, press ctrl-c twice ...');
+console.log(' or will not go back to node-red-contrib-alasql directory');
