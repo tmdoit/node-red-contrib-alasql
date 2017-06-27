@@ -21,11 +21,10 @@ if (!fs.existsSync('./test/flotsam/userdir/alafiletests.json')) {
     console.log('Create directories for instance of node-red settings, test flows, files, etc.');
     fs.copySync('./flows/alafiletests.json', './test/flotsam/userdir/alafiletests.json');
     fs.ensureDirSync('./test/flotsam/files');
-    console.log('test/flotsam/userdir for node-red user directory created');
-    console.log('Test flows copied into test/flotsam/userdir');
-    console.log('test/flotsam/files as root directory for alasql in/out files created');
-}
-else {
+    console.log('./test/flotsam/userdir for node-red user directory created');
+    console.log('Test flows copied into ./test/flotsam/userdir');
+    console.log('./test/flotsam/files as root directory for alasql in/out files created');
+} else {
     console.log('Using existing test directories');
 }
 
