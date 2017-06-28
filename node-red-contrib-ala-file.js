@@ -23,7 +23,7 @@ module.exports = function (RED) {
         node.on("input", (msg) => {
             var filename = node.filename || msg.filename || "";
             if (filename !== "") {
-                node.status({fill: "grey", shape: "dot", text: ' ' + filename + '.' + this.format});
+                node.status({fill: "green", shape: "dot", text: ' ' + filename + '.' + this.format});
             }
             if (filename === "") {
                 node.warn(RED._("file.errors.nofilename"));
@@ -63,7 +63,7 @@ module.exports = function (RED) {
         node.on("input", (msg) => {
             var filename = node.filename || msg.filename || "";
             if (filename !== "") {
-                node.status({fill: "grey", shape: "dot", text: ' ' + filename + '.' + this.format});
+                node.status({fill: "green", shape: "dot", text: ' ' + filename + '.' + this.format});
             }
             if (filename === "") {
                 node.warn(RED._("file.errors.nofilename"));

@@ -1,13 +1,11 @@
-echo "node-red run test flows from node-red-contrib-alasql"
+rem 'npm test' must be run from the node-red-contrib-alasql install directory first!
 
-echo "Files root directory in test\flotsam\files"
-cd test\flotsam\files
+echo "node-red run test flows from node-red-contrib-alasql"
 
 rem Set any custom environment stuff here
 rem set PORT=8081
 
-rem Bring up node red
-node-red -u ..\userdir ..\userdir\alafiletests.json
-
-rem Put us back to directory we started this bat file
-cd ../../..
+rem link and Bring up node red
+echo "symlink to this release of node-red-contrib-alasql"
+echo "node-red -u ./test/flotsam/userdir ./test/flotsam/userdir/alafiletests.json"
+npm link & node-red -u ./test/flotsam/userdir ./test/flotsam/userdir/alafiletests.json
