@@ -29,51 +29,41 @@ An excellent nodejs ES6 compatibility analysis can be found at
 [https://kangax.github.io](https://kangax.github.io/compat-table/es6/).
 
 > node-red needs to be installed with the recommended *-g* global option 
-`npm install node-red -g`.
+`npm install node-red -g` for the magic to work. Also, save yourself
+a lot of grief by ensuring the account installing all this stuff has Admin
+privileges.
 
-## Installing the node-red-contrib-alasql test suite
-Install *node-red-contrib-alasql* in any directory that you generally or wish
-to place node-red nodes ...
+## Installing the node-red-contrib-alasql Test Suite
+The Test Suite is installed automatically during the `npm install`.
 
+In a directory you put test stuff:
 ```
 git clone https://github.com/AlaSQL/node-red-contrib-alasql.git
-
-```
-This will create a *node-red-contrib-alasql* sub-directory. To finish the
-install you will need to install the *node-red-contrib-alasql* dependencies ...
-
-```
 cd node-red-contrib-alasql
 npm install
 
 ```
-To bring the test system up, will need to do :
 
-```
-npm test
-```
-
-This will create a [flotsam](http://www.dictionary.com/browse/flotsam) directory
-under the *test* sub-directory of *node-red-contrib-alasql*. Flotsam will contain
-all the stuff required by node-red to come up with the test suite.
-
+This will create a
+[./test/flotsam](http://www.dictionary.com/browse/flotsam)
+sub-directory of *node-red-contrib-alasql*. Flotsam will contain
+all the stuff required by node-red to come up with the Test Suite.
 
 To start node-red server with test flows on Linux/OSX: 
 ```
-test/startup.sh
+./start-test.sh
 
 ```
-
 or on Windows:
 ```
-test\startup.bat
+.\start-test.bat
 
 ```
 Due to node-red's node loading hierarchy
 [see adding nodes](https://nodered.org/docs/getting-started/adding-nodes),
-the nodes just installed may not override the older release.
+the nodes just installed may not override an older release.
 
-> This might happen if the older node release was installed in the same directory
+> This might happen if the older release was installed in the same directory
 path which node-red itself is installed. That method of installing nodes is
 rare and frowned upon - since re-installing node-red would wipe out those nodes.
 

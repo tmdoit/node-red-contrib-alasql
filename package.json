@@ -1,13 +1,13 @@
 {
   "name": "node-red-contrib-alasql",
-  "version": "0.2.3-develop",
+  "version": "0.2.4-develop",
   "description": "Node-RED wrapper for AlaSQL database and XLSX import/export",
   "author": "Mathias Rangel Wulff <m@rawu.dk>, Andrey Gershun <agershun@gmail.com>",
   "contributors": [
     "Kim McKinley <kim@lrunit.net> (http://github.com/potofcoffee2go)"
   ],
   "scripts": {
-    "test": "node ./test/testflows.js"
+    "postinstall": "node ./test/install"
   },
   "dependencies": {
     "alasql": "0.3.*",
