@@ -51,12 +51,12 @@ all the stuff required by node-red to come up with the Test Suite.
 
 To start node-red server with test flows on Linux/OSX: 
 ```
-./start-test.sh
+./test/start.sh
 
 ```
 or on Windows:
 ```
-.\start-test.bat
+.\test\start.bat
 
 ```
 Due to node-red's node loading hierarchy

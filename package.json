@@ -7,7 +7,7 @@
     "Kim McKinley <kim@lrunit.net> (http://github.com/potofcoffee2go)"
   ],
   "scripts": {
-    "postinstall": "node ./test/install"
+    "test": "node ./test/install"
   },
   "dependencies": {
     "alasql": "0.3.*",

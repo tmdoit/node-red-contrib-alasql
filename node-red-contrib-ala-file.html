@@ -38,7 +38,7 @@
 </script>
 
 <script type="text/x-red" data-help-name="ala-file in">
-    <p>version: <i>0.2.4-develop</i><br> <!-- do not change - see .test/install.js -->
+    <p>version: <i>0.2.4-develop</i><br><br> <!-- do not change - see .test/install.js -->
     Reads <code>msg.payload</code> from the specified file in XLSX, CSV, or other formats. The node uses <a href="https://github.com/agershun/alasql" target="_blank">AlaSQL</a> library.</p>
     <p>The filename can be configured in the node. If left blank it should be set by <code>msg.filename</code> on the incoming message. <br> In either case, <i>do not</i> include the extension ('.xlsx', '.csv', etc.) as that will be appended to the file path based on the <i>Format</i> configuration parameter.</p>
     <p>Note: the 'tab' and 'tsv' formats are identical, both use <code>.tab</code> extension.</p>
@@ -110,7 +110,7 @@
 </script>
 
 <script type="text/x-red" data-help-name="ala-file out">
-    <p>version: <i>0.2.4-develop</i><br> <!-- do not change - see .test/install.js -->
+    <p>version: <i>0.2.4-develop</i><br><br> <!-- do not change - see .test/install.js -->
     Write <code>msg.payload</code> to a specified fileformat (<code>xlsx</code>, <code>xls</code>, <code>csv</code>, <code>json</code>, <code>tab</code>, <code>tsv</code>, or <code>txt</code>. The node uses <a href="https://github.com/agershun/alasql" target="_blank">AlaSQL</a> library.</p>
     <p>The filename can be configured in the node. If left blank it should be set by <code>msg.filename</code> on the incoming message. <br> In either case, <i>do not</i> include the extension ('.xlsx', '.csv', etc.) as that will be appended to the file path based on the <i>Format</i> configuration parameter.</p>
     <p>Note: the 'tab' and 'tsv' formatsare identical, both use <code>.tab</code> extension.</p>

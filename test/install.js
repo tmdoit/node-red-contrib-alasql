@@ -17,6 +17,7 @@
  */
 
 'use strict';
+
 const fs = require('fs-extra');
 const resolve = require('path').resolve;
 var pkg = require('../package.json');
@@ -49,9 +50,25 @@ fs.copySync(resolve(__dirname,'../flows/alafiletests.json'), flowFile);
 fs.ensureDirSync(resolve(__dirname,'./flotsam/files'));
 
 // Inform of the paths to various stuff
-console.log('Node-red user directory:');
-console.log(userDir);
-console.log('Test flows copied into:');
-console.log(flowFile);
-console.log('Test files directory:');
-console.log(filesDir);
+console.log('Node-red user directory: ' + userDir);
+console.log('Test flows copied into: ' + flowFile);
+console.log('Test files directory: ' + filesDir);
+
+// Symlink
+console.log('');
+console.log('Create symlink - all instances of node-red will now include' +
+            ' alasql nodes in the palette.');
+console.log('After testing can do a \'npm unlink\' from this directory' +
+            ' to remove the symlink.');
+require('child_process').spawnSync('npm', ['link'], { env: process.env, stdio: 'inherit'});
+
+// Directions for starting up the Test Suite
+console.log('');
+console.log('To start the Test Suite in node-red:');
+var isWin = /^win/.test(process.platform);
+if (isWin) {
+    console.log('.\\test\\start.bat');
+}
+else {
+    console.log('./test/start.sh');
+}
