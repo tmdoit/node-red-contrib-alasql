@@ -7,7 +7,8 @@
     "Kim McKinley <kim@lrunit.net> (http://github.com/potofcoffee2go)"
   ],
   "scripts": {
-    "test": "node ./test/install"
+    "test-setup": "node ./test/setup",
+    "test": "node-red -u ./test/flotsam/userdir ./test/flotsam/userdir/alafiletests.json"
   },
   "dependencies": {
     "alasql": "0.3.*",

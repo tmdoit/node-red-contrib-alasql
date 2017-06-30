@@ -1,7 +1,5 @@
 # AlaSQL and AlaFile Test Suite
 
-(c) 2017 Mathias Rangel Wulff & Andrey Gershun
-
 Node-red `alasql nodes` access javascript objects as if they were a SQL database.
 The `ala file in/out` nodes transform the alasql results to .xlsx, .xls, .csv,
 .json, .tab, .tsv, or .txt files stored on the node-red server. See
@@ -26,14 +24,21 @@ exported/imported into the test suite for verification.
 To run the Test Suite from the default install as described on the 
 [*node-red-contrib-alasql* GitHub home page](https://github.com/AlaSQL/node-red-contrib-alasql),
 go to:
-```
-cd ~/.node-red/node-red-contrib-alasql/node-red-contrib-alasql
-npm test
-./test/start.sh # or on Windows .\test\start.bat
 
 ```
-This will create a node-red user directory containing AlaSQL test flows of
+cd ~/.node-red/node-red-contrib-alasql/node-red-contrib-alasql
+npm run test-setup
+npm test
+```
+
+This will 
+1. Create a node-red user directory containing AlaSQL test flows of
 the version installed in ~/.node-red
+2. Setup the needed files for testing
+3. Start the test serving on port 8081
+
+Step 2 only needs to be done once. To change the port do a `export PORT=8081` on Mac or `set PORT=8081` on Win prior to running `npm test`.
+
 
 ## Running stand alone Test Suite
 If you wish to test the current release of AlaSQL prior to going into production.
@@ -42,8 +47,8 @@ In any directory:
 git clone https://github.com/AlaSQL/node-red-contrib-alasql.git
 cd node-red-contrib-alasql
 npm install
+npm run test-setup
 npm test
-./test/start.sh # or on Windows .\test\start.bat
 
 ```
 
