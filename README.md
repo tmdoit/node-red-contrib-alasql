@@ -1,6 +1,6 @@
 # AlaSQL and AlaFile node-red nodes
 
-(c) 2016 Mathias Rangel Wulff & Andrey Gershun
+(c) 2017 Mathias Rangel Wulff & Andrey Gershun
 
 ## node-red-contrib-alasql
 
@@ -17,8 +17,6 @@ Go to your Node-RED user directory and install `node-red-contrib-alasql` from np
 cd ~/.node-red
 npm install node-red-contrib-alasql
 ```
-
-
 
 ## How to use an AlaSQL node
 
@@ -70,4 +68,8 @@ If you are not sure why this is funny - please find out more about "SQL injectio
 ![xkcd](https://cloud.githubusercontent.com/assets/1063454/13614823/999e9548-e572-11e5-9661-57a06e8f3fa4.png)
 
 
+## AlaFile - Test Suite
+A Test Suite of Alasql flows are provided to ensure Alasql nodes are operating
+properly. See [Alasql Test Suite](https://github.com/Alasql/node-red-contrib-alasql/tree/master/test)
+for more information.
 
