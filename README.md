@@ -1,6 +1,6 @@
 # AlaSQL and AlaFile node-red nodes
 
-(c) 2017 Mathias Rangel Wulff & Andrey Gershun
+(c) 2017 Mathias Rangel Wulff, Andrey Gershun & Kim McKinley 
 
 ## node-red-contrib-alasql
 
