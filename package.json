@@ -34,7 +34,7 @@
   "node-red": {
     "nodes": {
       "alasql": "node-red-contrib-alasql.js",
-      "ala-file": "node-red-contrib-ala-file.js"
+      "alafile": "node-red-contrib-alafile.js"
     }
   }
 }

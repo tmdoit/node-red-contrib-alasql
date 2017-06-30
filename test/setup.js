@@ -22,9 +22,9 @@ const fs = require('fs-extra');
 const resolve = require('path').resolve;
 var pkg = require('../package.json');
 
-// Insert this version into html for the ala-file nodes
+// Insert this version into html for the alafile nodes
 console.log('Update Alasql Nodes with current version: ' + pkg.version);
-var file = resolve(__dirname,'../node-red-contrib-ala-file.html');
+var file = resolve(__dirname,'../node-red-contrib-alafile.html');
 var alasqlHtml = fs.readFileSync(file, 'utf8');
 alasqlHtml = alasqlHtml.replace(/version: <i>.*<\/i>/g, 'version: <i>' + pkg.version + '</i>');
 fs.writeFileSync(file, alasqlHtml, 'utf8'); 

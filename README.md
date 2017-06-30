@@ -52,7 +52,7 @@ Please [consult the AlaSQL wiki](https://github.com/agershun/alasql/wiki/readme)
 
 ## AlaFile - Import and Export files
 
-You also can use `ala-file` component to perform import and export operations with files. The parameters include:
+You also can use `alafile` component to perform import and export operations with files. The parameters include:
 
 * `Name` - the name of the node
 * `File name` - path to import or export file
