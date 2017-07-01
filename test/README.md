@@ -24,10 +24,10 @@ exported/imported into the test suite for verification.
 
 ## Running Alasql Test Suite
 To run the Test Suite from the default install as described on the 
-[*node-red-contrib-alasql* GitHub home page](https://github.com/AlaSQL/node-red-contrib-alasql),
-go to:
+[*node-red-contrib-alasql* GitHub home page](https://github.com/AlaSQL/node-red-contrib-alasql):
+
 ```
-cd ~/.node-red/node-red-contrib-alasql/node-red-contrib-alasql
+cd ~/.node-red/node_modules/node-red-contrib-alasql
 npm test
 ./test/start.sh # or on Windows .\test\start.bat
 
