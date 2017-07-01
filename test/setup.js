@@ -20,6 +20,7 @@
 
 const fs = require('fs-extra');
 const resolve = require('path').resolve;
+var pkg = require('../package.json');
 
 console.log('');
 console.log('Create Alasql Test Suite');
@@ -51,10 +52,4 @@ require('child_process').spawnSync('npm', ['link'], { env: process.env, stdio: '
 // Directions for starting up the Test Suite
 console.log('');
 console.log('To start the Test Suite in node-red:');
-var isWin = /^win/.test(process.platform);
-if (isWin) {
-    console.log('.\\test\\start.bat');
-}
-else {
-    console.log('./test/start.sh');
-}
+console.log('npm test');

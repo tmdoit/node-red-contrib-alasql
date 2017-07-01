@@ -1,6 +1,6 @@
-<!-- ALA-FILE IN -->
+<!-- ALAFILE IN -->
 
-<script type="text/x-red" data-template-name="ala-file in">
+<script type="text/x-red" data-template-name="alafile in">
     <div class="form-row">
         <label for="node-input-name"><i class="icon-tag"></i> Name of node</label>
         <input type="text" id="node-input-name" placeholder="Name">
@@ -37,8 +37,8 @@
 
 </script>
 
-<script type="text/x-red" data-help-name="ala-file in">
-    <p>Reads <code>msg.payload</code> from the specified file in XLSX, CSV, or other formats. The node uses <a href="https://github.com/agershun/alasql" target="_blank">AlaSQL</a> library.</p>
+<script type="text/x-red" data-help-name="alafile in">
+    Reads <code>msg.payload</code> from the specified file in XLSX, CSV, or other formats. The node uses <a href="https://github.com/agershun/alasql" target="_blank">AlaSQL</a> library.</p>
     <p>The filename can be configured in the node. If left blank it should be set by <code>msg.filename</code> on the incoming message. <br> In either case, <i>do not</i> include the extension ('.xlsx', '.csv', etc.) as that will be appended to the file path based on the <i>Format</i> configuration parameter.</p>
     <p>Note: the 'tab' and 'tsv' formats are identical, both use <code>.tab</code> extension.</p>
 
@@ -47,7 +47,7 @@
 
 <script type="text/javascript">
 
-    RED.nodes.registerType('ala-file in', {
+    RED.nodes.registerType('alafile in', {
         category: 'storage',
         color: "#f7df8e",
         inputs: 1,
@@ -70,8 +70,8 @@
     });
 </script>
 
-<!-- ALA-FILE OUT -->
-<script type="text/x-red" data-template-name="ala-file out">
+<!-- ALAFILE OUT -->
+<script type="text/x-red" data-template-name="alafile out">
     <div class="form-row">
         <label for="node-input-name"><i class="icon-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
@@ -108,15 +108,15 @@
 
 </script>
 
-<script type="text/x-red" data-help-name="ala-file out">
-    <p>Write <code>msg.payload</code> to a specified fileformat (<code>xlsx</code>, <code>xls</code>, <code>csv</code>, <code>json</code>, <code>tab</code>, <code>tsv</code>, or <code>txt</code>. The node uses <a href="https://github.com/agershun/alasql" target="_blank">AlaSQL</a> library.</p>
+<script type="text/x-red" data-help-name="alafile out">
+    Write <code>msg.payload</code> to a specified fileformat (<code>xlsx</code>, <code>xls</code>, <code>csv</code>, <code>json</code>, <code>tab</code>, <code>tsv</code>, or <code>txt</code>. The node uses <a href="https://github.com/agershun/alasql" target="_blank">AlaSQL</a> library.</p>
     <p>The filename can be configured in the node. If left blank it should be set by <code>msg.filename</code> on the incoming message. <br> In either case, <i>do not</i> include the extension ('.xlsx', '.csv', etc.) as that will be appended to the file path based on the <i>Format</i> configuration parameter.</p>
     <p>Note: the 'tab' and 'tsv' formatsare identical, both use <code>.tab</code> extension.</p>
 
 </script>
 
 <script type="text/javascript">
-    RED.nodes.registerType('ala-file out', {
+    RED.nodes.registerType('alafile out', {
         category: 'storage',
         color: "#f7df8e",
         inputs: 1,
@@ -132,7 +132,7 @@
         align: "right",
         label: function () {
             //console.log(this.format);
-            return this.name || this.format || "Ala-file out";
+            return this.name || this.format || "alafile out";
         },
         labelStyle: function () {
             return this.name ? "node_label_italic" : "";

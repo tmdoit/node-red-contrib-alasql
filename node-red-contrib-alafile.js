@@ -51,7 +51,7 @@ module.exports = function (RED) {
         });
     }
 
-    RED.nodes.registerType("ala-file out", AlaFileNodeOut);
+    RED.nodes.registerType("alafile out", AlaFileNodeOut);
 
     function AlaFileNode(config) {
         RED.nodes.createNode(this, config);
@@ -95,5 +95,5 @@ module.exports = function (RED) {
         });
     }
 
-    RED.nodes.registerType("ala-file in", AlaFileNode);
+    RED.nodes.registerType("alafile in", AlaFileNode);
 };
