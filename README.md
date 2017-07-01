@@ -80,7 +80,7 @@ The test suite is kindly contributed by
 To run the Test Suite from an existing node-red installation that uses `node-red-contrib-alasql` please do:
 
 ```
-cd ~/.node-red/node-red-contrib-alasql/node-red-contrib-alasql
+cd ~/.node-red/node_modules/node-red-contrib-alasql
 npm run test-setup
 npm test
 ```
