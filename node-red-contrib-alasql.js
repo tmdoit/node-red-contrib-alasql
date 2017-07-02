@@ -17,7 +17,10 @@ module.exports = function (RED) {
                 node.error(err, msg);
             });
         });
+        this.on('close', () => {
+            node.status({});
+        });
     }
 
     RED.nodes.registerType("alasql", AlasqlNodeIn);
-}
+};
