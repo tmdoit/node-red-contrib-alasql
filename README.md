@@ -1,12 +1,13 @@
 # AlaSQL and AlaFile node-red nodes
 
-(c) 2016 Mathias Rangel Wulff & Andrey Gershun
+(c) 2017 Mathias Rangel Wulff, Andrey Gershun & Kim McKinley 
 
 ## node-red-contrib-alasql
 
-This package consists of two components for Node-RED wrapping [AlaSQL](https://github.com/agershun/alasql) for fast SQL based in-memory data processing for BI and ERP applications and import-export files into XLSX, XLS, and other data formats.
+The Node-red `alasql` node lets you access javascript objects as if they were a SQL database. The `alafile in/out` nodes lets you transform the AlaSQL results into .xlsx, .xls, .csv, .json, .tab, .tsv, or .txt files stored on the node-red server.
 
-Especially useful when you have (many) different sources coming with data you want to join, filter and format.
+The package is a Node-red wrapping of [AlaSQL](https://github.com/agershun/alasql) providing fast SQL based in-memory data processing for BI and ERP applications and import-export files into XLSX, XLS, and other data formats. Especially useful when you have (many) different sources coming with data you want to join, filter and format.
+
 
 
 ## Install
@@ -17,8 +18,6 @@ Go to your Node-RED user directory and install `node-red-contrib-alasql` from np
 cd ~/.node-red
 npm install node-red-contrib-alasql
 ```
-
-
 
 ## How to use an AlaSQL node
 
@@ -53,7 +52,7 @@ Please [consult the AlaSQL wiki](https://github.com/agershun/alasql/wiki/readme)
 
 ## AlaFile - Import and Export files
 
-You also can use `ala-file` component to perform import and export operations with files. The parameters include:
+You also can use `alafile` component to perform import and export operations with files. The parameters include:
 
 * `Name` - the name of the node
 * `File name` - path to import or export file
@@ -61,13 +60,70 @@ You also can use `ala-file` component to perform import and export operations wi
 * `Colums` - specify `*` (star) for all columns or list them with comma like `one, two, three`. You also can use AlaSQL functions or even rename columns with `AS` operator (see the AlaSQL `SELECT` statement documentation)
 * `Headers` - include first line headers
 
+## Test Suite
+The *node-red-contrib-alasql test suite* for AlaSQL flows is provided to ensure Alasql nodes are operating properly. 
+
+
+*node-red-contrib-alasql* contains a set of test flows to ensure the nodes are
+handling exceptions properly and running as expected. Existing flows can be 
+exported/imported into the test suite for verification.
+
+
+The test suite is kindly contributed by
+[Kim McKinley (PotOfCoffee2Go)](http://github.com/potofcoffee2go). Requests and comments are appreciated. Create an 
+[issue](https://github.com/AlaSQL/node-red-contrib-alasql/issues) and please mention `@PotOfCoffee2Go` somewhere in the issue.
+
+
+
+
+### Running Alasql Test Suite
+To run the Test Suite from an existing node-red installation that uses `node-red-contrib-alasql` please do:
+
+```
+cd ~/.node-red/node_modules/node-red-contrib-alasql
+npm run test-setup
+npm test
+```
+
+This will 
+
+1. Create a node-red user directory containing AlaSQL test flows of
+the version installed in ~/.node-red
+2. Setup the needed files for testing
+3. Start the test serving on port 8081
+
+Next time you want to run your test you can skip step 2.
+
+To change the port do a `export PORT=8081` on Mac or `set PORT=8081` on Win prior to running `npm test`.
+
+
+### Running stand alone Test Suite
+If you wish to test the current release of AlaSQL prior to going into production.
+In any directory:
+
+```
+git clone https://github.com/AlaSQL/node-red-contrib-alasql.git
+cd node-red-contrib-alasql
+npm install
+npm run test-setup
+npm test
+
+```
+
+The test suite uses the `npm link` command which allows node-red to
+automatically add *AlaSQL* nodes to node-red by default. To remove this behavior,
+issue a `npm unlink` from the *node-red-contrib-alasql* directory cloned above.
+
+
+
 ## Please note
 
 As default the library works in-memory - so all unsaved data are reset when Node-RED closes. Please consult [the wiki](https://github.com/agershun/alasql/wiki) to read more about how to let data be persistent.  
 
-If you are not sure why this is funny - please find out more about "SQL injections"...
+If you are not sure why this is funny - please find out more about "SQL injections":
 
 ![xkcd](https://cloud.githubusercontent.com/assets/1063454/13614823/999e9548-e572-11e5-9661-57a06e8f3fa4.png)
+
 
 
 

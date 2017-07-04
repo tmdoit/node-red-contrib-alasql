@@ -1,4 +1,3 @@
-
 <script type="text/x-red" data-template-name="alasql">
     <div class="form-row">
         <label for="node-input-name"><i class="icon-tag"></i> Name</label>
@@ -16,7 +15,7 @@
 </script>
 
 <script type="text/x-red" data-help-name="alasql">
-    <p>A Node-RED node to use <a href="https://github.com/agershun/alasql" target="_blank">AlaSQL</a> for fast SQL based in-memory data processing for BI and ERP applications.</p>
+    A Node-RED node to use <a href="https://github.com/agershun/alasql" target="_blank">AlaSQL</a> for fast SQL based in-memory data processing for BI and ERP applications.</p>
     <p>Especially useful when you have (many) different sources coming with data you want to join, filter and format with good'old SQL.</p>
     <ul>
     <li>
@@ -43,30 +42,30 @@
 </script>
 
 <script type="text/javascript">
-    RED.nodes.registerType('alasql',{
+    RED.nodes.registerType('alasql', {
         category: 'advanced',
-        color:"#f7df3e",
-        inputs:1,
-        outputs:1,
+        color: "#f7df8e",
+        inputs: 1,
+        outputs: 1,
         defaults: {
-            name: {value:''},
-            query: {value:'SELECT * FROM ?'}
+            name: {value: ''},
+            query: {value: 'SELECT * FROM ?'}
         },
         icon: "alasql.png",
-        label: function() {
-            return this.name||"alasql";
+        label: function () {
+            return this.name || "alasql";
         },
-        labelStyle: function() {
-            return this.name?"node_label_italic":"";
+        labelStyle: function () {
+            return this.name ? "node_label_italic" : "";
         },
-        oneditprepare: function() {
+        oneditprepare: function () {
             this.editor = RED.editor.createEditor({
                 id: 'node-input-query-editor',
                 mode: 'ace/mode/sql',
                 value: $("#node-input-query").val()
             });
         },
-        oneditsave: function() {
+        oneditsave: function () {
             $("#node-input-query").val(this.editor.getValue())
             delete this.editor;
         }
