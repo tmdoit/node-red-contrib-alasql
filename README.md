@@ -37,7 +37,7 @@ Default return format is an array of objects:
 
 To manipulate output format please consult the use of [`VALUE OF`](https://github.com/agershun/alasql/wiki/Value), [`MATRIX OF`](https://github.com/agershun/alasql/wiki/MATRIX), [`COLUMN OF`](https://github.com/agershun/alasql/wiki/COLUMN), [`ROW OF`](https://github.com/agershun/alasql/wiki/ROW), and [`RECORDSET OF`](https://github.com/agershun/alasql/wiki/RECORDSET).
 
-If several queries are executed (seperated by `;`) the returned value will be an array with the result from each.
+If several queries are executed (separated by `;`) the returned value will be an array with the result from each.
 
 
 
@@ -47,7 +47,7 @@ Execute SQL on your data and output the result.
 
 This includes `INSERT`, `UPDATE`, `DELETE`, `VIEW` indexes and multiple levels of `JOIN`, `GROUP BY`, `UNION`, `ROLLUP()`, `CUBE()`, `GROUPING SETS()`, `CROSS APPLY`, `OUTER APPLY`, `WITH SELECT`, and subqueries. See the wiki to [compare supported features with SQL standards](https://github.com/agershun/alasql/wiki/SQL%20keywords).
 
-Please [consult the AlaSQL wiki](https://github.com/agershun/alasql/wiki/readme) to undertand the flexible nature of the library. 
+Please [consult the AlaSQL wiki](https://github.com/agershun/alasql/wiki/readme) to understand the flexible nature of the library. 
 
 
 ## AlaFile - Import and Export files
@@ -61,12 +61,11 @@ You also can use `alafile` component to perform import and export operations wit
 * `Headers` - include first line headers
 
 ## Test Suite
-The *node-red-contrib-alasql test suite* for AlaSQL flows is provided to ensure Alasql nodes are operating properly. 
+The *node-red-contrib-alasql test suite* for AlaSQL flows is provided to ensure AlaSQL nodes are operating properly. 
 
 
 *node-red-contrib-alasql* contains a set of test flows to ensure the nodes are
-handling exceptions properly and running as expected. Existing flows can be 
-exported/imported into the test suite for verification.
+handling exceptions properly and running as expected. Existing flows can be exported/imported into the test suite for verification.
 
 
 The test suite is kindly contributed by
@@ -111,7 +110,7 @@ npm test
 ```
 
 The test suite uses the `npm link` command which allows node-red to
-automatically add *AlaSQL* nodes to node-red by default. To remove this behavior,
+automatically add *AlaSQL* nodes to node-red by default. To remove this behaviour,
 issue a `npm unlink` from the *node-red-contrib-alasql* directory cloned above.
 
 
