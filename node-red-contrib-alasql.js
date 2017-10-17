@@ -8,7 +8,7 @@ module.exports = function (RED) {
         node.on("input", function (msg) {
             var sql = this.query || 'SELECT * FROM ?';
             var bind = Array.isArray(msg.payload) ? msg.payload : [msg.payload];
-            alasql.promise(sql, [bind])
+            alasql.promise(sql, bind)
                 .then(function (res) {
                     msg.payload = res;
                     node.status({fill: "green", shape: "dot", text: ' Records: ' + msg.payload.length});
