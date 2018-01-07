@@ -1,5 +1,7 @@
 # AlaSQL and AlaFile node-red nodes
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/AlaSQL/node-red-contrib-alasql.svg)](https://greenkeeper.io/)
+
 (c) 2017 Mathias Rangel Wulff, Andrey Gershun & Kim McKinley 
 
 ## node-red-contrib-alasql
